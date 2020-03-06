@@ -25,7 +25,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `Message`
 --
-
+CREATE DATABASE SnackPals;
+USE SnackPals;
 CREATE TABLE IF NOT EXISTS `Message` (
   `MessageID` int(11) NOT NULL,
   `MessageContent` varchar(255) DEFAULT NULL,
