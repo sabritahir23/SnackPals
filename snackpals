@@ -1,0 +1,12 @@
+//Here are all of the joins for the SnackPals database and their descriptions:
+//Link for screenshots (all the way at the bottom): https://docs.google.com/document/d/1k905UFofuIDyqceXn413Yi-YS7JLMirkQv-BcIFjwCM/edit?usp=sharing
+
+
+SELECT Post.PostID, Post.PostContent, Post.PostDescription, Post.PostLocation, Users.UserName FROM Post INNER JOIN Users ON Post.UserID=Users.UserID
+//shows the username of the person who posted
+
+SELECT Message.MessageID, Message.MessageContent, Users.UserName FROM Message INNER JOIN Users ON Message.UserID=Users.UserID
+//shows the username of the message sender
+
+SELECT Rating.RatingID, Rating.UserRating, Rating.RatingDescription, Recipient.RecipientID FROM Rating INNER JOIN Recipient ON Rating.RecipientID=Recipient.RecipientID
+//shows who received the rating of the food
